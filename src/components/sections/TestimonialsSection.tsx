@@ -13,7 +13,7 @@ const TestimonialsSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-950">
+    <section className="py-6 xs:py-8 sm:py-14 lg:py-20 bg-gray-50 dark:bg-gray-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <SectionHeading
           title={t('testimonials.heading')}

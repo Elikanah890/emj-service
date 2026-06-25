@@ -7,7 +7,7 @@ const CallToAction: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-secondary-navy dark:bg-gray-950">
+    <section className="py-6 xs:py-8 sm:py-14 lg:py-20 bg-secondary-navy dark:bg-gray-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="rounded-2xl bg-gradient-to-br from-secondary-darkNavy to-secondary-navy dark:from-gray-900 dark:to-gray-800 p-8 sm:p-12 lg:p-16 relative overflow-hidden border border-white/5">
           <div className="absolute top-0 right-0 w-80 h-80 bg-secondary-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />

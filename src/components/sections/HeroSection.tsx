@@ -19,13 +19,13 @@ const HeroSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[90vh] bg-[#0A1628] overflow-hidden">
+    <section className="relative min-h-[75vh] xs:min-h-[80vh] sm:min-h-[90vh] bg-[#0A1628] overflow-hidden">
       {/* Ambient glows */}
       <div className="absolute top-[-15%] right-[-10%] w-[500px] lg:w-[700px] h-[500px] lg:h-[700px] bg-secondary-gold/6 rounded-full blur-[120px]" />
       <div className="absolute bottom-[-15%] left-[-10%] w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] bg-blue-500/6 rounded-full blur-[120px]" />
 
       {/* Content — starts just below fixed transparent header */}
-      <div className="relative z-10 pt-14 sm:pt-16 lg:pt-20 pb-8 sm:pb-12">
+      <div className="hero-gap-fix relative z-10 pt-14 sm:pt-16 lg:pt-20 pb-4 xs:pb-6 sm:pb-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
           <div className="sm:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl">
 
