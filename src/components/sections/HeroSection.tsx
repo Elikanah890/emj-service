@@ -15,11 +15,26 @@ const heroStats = [
   { value: '98%', label: 'Client Satisfaction', highlight: true },
 ];
 
+const androidForceCSS = `
+  @media screen and (max-width: 640px) {
+    .android-hero-fix {
+      padding-bottom: 0.25rem !important;
+      margin-bottom: 0 !important;
+      min-height: 80vh !important;
+    }
+  }
+`;
+
 const HeroSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-[75vh] xs:min-h-[80vh] sm:min-h-[90vh] bg-[#0A1628] overflow-hidden">
+    <>
+      <style>{androidForceCSS}</style>
+      <section
+        className="android-hero-fix relative min-h-[75vh] xs:min-h-[80vh] sm:min-h-[90vh] bg-[#0A1628] overflow-hidden"
+        style={{ paddingBottom: '0.25rem', marginBottom: 0 }}
+      >
       {/* Ambient glows */}
       <div className="absolute top-[-15%] right-[-10%] w-[500px] lg:w-[700px] h-[500px] lg:h-[700px] bg-secondary-gold/6 rounded-full blur-[120px]" />
       <div className="absolute bottom-[-15%] left-[-10%] w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] bg-blue-500/6 rounded-full blur-[120px]" />
@@ -113,6 +128,7 @@ const HeroSection: React.FC = () => {
         </div>
       </motion.div>
     </section>
+    </>
   );
 };
 

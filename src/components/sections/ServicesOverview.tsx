@@ -38,7 +38,7 @@ const ServicesOverview: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-6 xs:py-8 sm:py-14 lg:py-20 bg-white dark:bg-gray-900">
+    <section className="android-services-fix py-6 xs:py-8 sm:py-14 lg:py-20 bg-white dark:bg-gray-900" style={{ paddingTop: '0.25rem', marginTop: 0 }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <SectionHeading
           title={t('services.heading')}

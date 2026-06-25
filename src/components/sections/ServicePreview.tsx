@@ -34,7 +34,7 @@ const ServicePreview: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative z-10 -mt-3 xs:-mt-5 sm:-mt-8 lg:-mt-10 pb-6 xs:pb-8 sm:pb-14">
+    <section className="android-services-fix relative z-10 -mt-3 xs:-mt-5 sm:-mt-8 lg:-mt-10 pb-6 xs:pb-8 sm:pb-14" style={{ paddingTop: '0.25rem', marginTop: 0 }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {servicesPreview.map((service, index) => (

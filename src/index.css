@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Android-specific gap fix: tighter spacing on small screens (360-480px) */
-@media screen and (max-width: 480px) {
+/* FORCE ANDROID FIX — overrides Tailwind on small screens (360-480px) */
+@media screen and (max-width: 640px) {
+  .android-hero-fix {
+    padding-bottom: 0.25rem !important;
+    margin-bottom: 0 !important;
+    min-height: 80vh !important;
+  }
+
+  .android-services-fix {
+    padding-top: 0.25rem !important;
+    margin-top: 0 !important;
+  }
+
   .hero-gap-fix {
-    padding-bottom: 1rem !important;
+    padding-bottom: 0.25rem !important;
   }
 }
