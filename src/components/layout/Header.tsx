@@ -34,14 +34,14 @@ const Header: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-sm border-b border-gray-100 dark:border-gray-800 py-2'
-          : 'bg-transparent py-3 sm:py-4'
+          : 'bg-transparent py-1.5 sm:py-2.5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <Logo className="h-10 sm:h-11 w-auto" />
-          <span className={`ml-2 font-serif text-lg sm:text-xl font-bold ${navLinkClass}`}>
+          <Logo className="h-8 sm:h-10 w-auto" />
+          <span className={`ml-2 font-serif text-base sm:text-lg font-bold ${navLinkClass}`}>
             EMJ SERVICE
           </span>
         </Link>

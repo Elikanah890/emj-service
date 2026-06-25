@@ -13,23 +13,17 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services/decoration" element={<DecorationServices />} />
-            <Route path="/services/vehicles" element={<VehicleServices />} />
-            <Route path="/services/driving-license" element={<DrivingLicenseServices />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-        
-        <Footer />
-      </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services/decoration" element={<DecorationServices />} />
+        <Route path="/services/vehicles" element={<VehicleServices />} />
+        <Route path="/services/driving-license" element={<DrivingLicenseServices />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

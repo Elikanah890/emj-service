@@ -65,12 +65,12 @@ const ContactSection: React.FC = () => {
     setIsSubmitting(false);
   };
 
-  const inputClass = 'w-full px-4 py-2.5 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-secondary-gold/50 focus:border-secondary-gold transition-colors';
+  const inputClass = 'w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm min-h-[44px] focus:ring-2 focus:ring-secondary-gold/50 focus:border-secondary-gold transition-colors';
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Contact info */}
           <div>
             <SectionHeading title={t('contact.heading')} subtitle={t('contact.subheading')} />

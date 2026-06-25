@@ -34,7 +34,7 @@ const ServicePreview: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative z-10 -mt-8 sm:-mt-10 lg:-mt-12 pb-12 sm:pb-16">
+    <section className="relative z-10 -mt-6 sm:-mt-8 lg:-mt-10 pb-10 sm:pb-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {servicesPreview.map((service, index) => (

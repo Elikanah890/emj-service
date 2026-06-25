@@ -16,7 +16,7 @@ const PortfolioGallery: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Our Work"

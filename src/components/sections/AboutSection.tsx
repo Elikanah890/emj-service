@@ -21,9 +21,9 @@ const AboutSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-950">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Image side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

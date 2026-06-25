@@ -38,7 +38,7 @@ const ServicesOverview: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <SectionHeading
           title={t('services.heading')}
@@ -50,7 +50,7 @@ const ServicesOverview: React.FC = () => {
           {servicesData.map((service, index) => (
             <motion.div
               key={service.to}
-              className="group bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              className="group bg-white dark:bg-gray-800 rounded-2xl p-5 sm:p-6 lg:p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}

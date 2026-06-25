@@ -21,9 +21,9 @@ const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0A1628] dark:bg-gray-950 text-white pt-14 sm:pt-16 pb-8">
+    <footer className="bg-[#0A1628] dark:bg-gray-950 text-white pt-12 sm:pt-14 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {footerLinks.map(({ to, key }) => (
                 <li key={to}>
-                  <Link to={to} className="text-gray-400 hover:text-secondary-gold transition-colors text-sm">{t(key)}</Link>
+                  <Link to={to} className="text-gray-400 hover:text-secondary-gold transition-colors text-sm py-1.5 block">{t(key)}</Link>
                 </li>
               ))}
             </ul>
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {quickLinks.map(({ to, key }) => (
                 <li key={to}>
-                  <Link to={to} className="text-gray-400 hover:text-secondary-gold transition-colors text-sm">{t(key)}</Link>
+                  <Link to={to} className="text-gray-400 hover:text-secondary-gold transition-colors text-sm py-1.5 block">{t(key)}</Link>
                 </li>
               ))}
             </ul>
