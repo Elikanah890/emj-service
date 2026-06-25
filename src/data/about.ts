@@ -1,0 +1,42 @@
+export const aboutData = {
+  company: "EMJ SERVICE",
+  founder: "Emmanuel Mika Jeremia",
+  phone: "+255 692 216 777",
+  whatsapp: "https://wa.me/255692216777",
+  email: "emmanuelmika@gmail.com",
+  address: "Dar es Salaam, Tanzania",
+  hours: "Mon-Fri 8:00 AM - 6:00 PM, Sat 9:00 AM - 2:00 PM",
+  founded: "2020",
+  description: "Professional event decoration, vehicle registration, and driving license services in Tanzania.",
+  services: [
+    "Event Decoration",
+    "Vehicle Registration",
+    "Driving License Services",
+  ],
+  location: {
+    country: "Tanzania",
+    city: "Dar es Salaam",
+    coordinates: [-6.7924, 39.2083],
+  },
+  founderImage: "/logo.jpeg",
+  mission: "To provide exceptional event decoration and vehicle registration services that exceed our clients' expectations.",
+  vision: "To be the leading provider of event decoration and vehicle registration services in Tanzania.",
+  values: [
+    "Customer Satisfaction",
+    "Professionalism",
+    "Integrity",
+    "Innovation",
+    "Quality",
+  ],
+  social: {
+    facebook: "https://facebook.com/emjservice",
+    instagram: "https://instagram.com/emjservice",
+    whatsapp: "https://wa.me/255692216777",
+  },
+  stats: {
+    eventsDecorated: "500+",
+    documentsProcessed: "1000+",
+    clientSatisfaction: "98%",
+  },
+  url: "https://emjservice.com",
+};

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+
+Sitemap: https://emjservice.com/sitemap.xml
+
+Crawl-delay: 1
