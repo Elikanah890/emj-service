@@ -23,6 +23,45 @@ const androidForceCSS = `
       min-height: 80vh !important;
     }
   }
+  @media screen and (min-width: 700px) and (max-width: 800px) {
+    .infinix-hero-text {
+      font-size: 2.2rem !important;
+      line-height: 1.2 !important;
+    }
+    .infinix-hero-sub {
+      font-size: 1.8rem !important;
+      line-height: 1.2 !important;
+      margin-top: 0.25rem !important;
+    }
+    .infinix-body-text {
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
+      max-width: 100% !important;
+    }
+    .infinix-badge {
+      font-size: 0.65rem !important;
+      padding: 0.25rem 0.75rem !important;
+    }
+    .infinix-cta {
+      font-size: 0.8rem !important;
+      padding: 0.5rem 1rem !important;
+      min-height: 38px !important;
+    }
+    .infinix-stats {
+      font-size: 1.2rem !important;
+    }
+    .infinix-stat-label {
+      font-size: 0.6rem !important;
+    }
+    .infinix-trust {
+      font-size: 0.6rem !important;
+      padding: 0.2rem 0.6rem !important;
+    }
+    .infinix-trust-icon {
+      width: 0.8rem !important;
+      height: 0.8rem !important;
+    }
+  }
 `;
 
 const HeroSection: React.FC = () => {
@@ -46,7 +85,7 @@ const HeroSection: React.FC = () => {
 
             {/* Badge */}
             <motion.div
-              className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2.5 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-5"
+              className="infinix-badge inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-2.5 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-5"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
             >
               <Sparkles size={12} className="sm:w-3.5 sm:h-3.5 text-secondary-gold flex-shrink-0" />
@@ -58,17 +97,17 @@ const HeroSection: React.FC = () => {
               className="font-serif font-bold leading-[1.1] tracking-tight mb-3 sm:mb-5"
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <span className="block text-secondary-gold text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl sm:whitespace-nowrap">
+              <span className="infinix-hero-text block text-secondary-gold text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl sm:whitespace-nowrap" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', lineHeight: 1.15 }}>
                 Transforming Celebrations
               </span>
-              <span className="block text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl sm:whitespace-nowrap mt-1 sm:mt-2">
+              <span className="infinix-hero-sub block text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-7xl sm:whitespace-nowrap mt-1 sm:mt-2" style={{ fontSize: 'clamp(1.5rem, 4vw, 4rem)', lineHeight: 1.15, marginTop: '0.25rem' }}>
                 &amp; Simplifying Vehicle Documentation
               </span>
             </motion.h1>
 
             {/* Subtitle */}
             <motion.p
-              className="font-sans text-white/75 leading-relaxed mb-3 sm:mb-5 text-[13px] sm:text-sm md:text-base lg:text-lg max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-3xl"
+              className="infinix-body-text font-sans text-white/75 leading-relaxed mb-3 sm:mb-5 text-[13px] sm:text-sm md:text-base lg:text-lg max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-3xl"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
             >
               <span className="sm:hidden">Elegant event decoration & vehicle documentation across Tanzania. We transform celebrations with creativity and handle paperwork with precision.</span>
@@ -81,8 +120,8 @@ const HeroSection: React.FC = () => {
               className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-5"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Button to="/services" variant="gold" size="lg" icon={<ArrowRight size={16} />} className="w-full sm:w-auto text-sm sm:text-base">Explore Services</Button>
-              <Button external to="https://wa.me/255692216777" variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base">WhatsApp Us</Button>
+              <Button to="/services" variant="gold" size="lg" icon={<ArrowRight size={16} />} className="infinix-cta w-full sm:w-auto text-sm sm:text-base">Explore Services</Button>
+              <Button external to="https://wa.me/255692216777" variant="outline" size="lg" className="infinix-cta w-full sm:w-auto text-sm sm:text-base">WhatsApp Us</Button>
             </motion.div>
 
             {/* Trust badges */}
@@ -91,8 +130,8 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
             >
               {trustBadges.map((badge) => (
-                <div key={badge.label} className="flex items-center gap-1 bg-white/[0.06] backdrop-blur-sm px-2 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white/10 whitespace-nowrap">
-                  <badge.icon size={11} className={`flex-shrink-0 ${badge.color}`} />
+                <div key={badge.label} className="infinix-trust flex items-center gap-1 bg-white/[0.06] backdrop-blur-sm px-2 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white/10 whitespace-nowrap">
+                  <badge.icon size={11} className={`infinix-trust-icon flex-shrink-0 ${badge.color}`} />
                   <span className="text-white/70 font-medium text-[10px] sm:text-xs">{badge.label}</span>
                 </div>
               ))}
@@ -106,8 +145,8 @@ const HeroSection: React.FC = () => {
               <div className="flex flex-wrap gap-4 sm:gap-8 md:gap-12">
                 {heroStats.map((stat, i) => (
                   <div key={i}>
-                    <div className={`font-sans font-bold leading-none text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${stat.highlight ? 'text-secondary-gold' : 'text-white'}`}>{stat.value}</div>
-                    <div className="font-sans font-medium text-white/40 text-[10px] sm:text-xs mt-0.5">{stat.label}</div>
+                    <div className={`infinix-stats font-sans font-bold leading-none text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${stat.highlight ? 'text-secondary-gold' : 'text-white'}`}>{stat.value}</div>
+                    <div className="infinix-stat-label font-sans font-medium text-white/40 text-[10px] sm:text-xs mt-0.5">{stat.label}</div>
                   </div>
                 ))}
               </div>

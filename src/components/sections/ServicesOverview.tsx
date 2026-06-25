@@ -34,11 +34,34 @@ const servicesData = [
   },
 ];
 
+const infinixStyles = `
+  @media screen and (min-width: 700px) and (max-width: 800px) {
+    .infinix-services-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+    .infinix-services-card {
+      text-align: left !important;
+      padding: 1rem !important;
+    }
+    .infinix-services-title {
+      text-align: left !important;
+      font-size: 1.1rem !important;
+    }
+    .infinix-services-desc {
+      text-align: left !important;
+      font-size: 0.85rem !important;
+    }
+  }
+`;
+
 const ServicesOverview: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="android-services-fix py-6 xs:py-8 sm:py-14 lg:py-20 bg-white dark:bg-gray-900" style={{ paddingTop: '0.25rem', marginTop: 0 }}>
+    <>
+      <style>{infinixStyles}</style>
+      <section className="android-services-fix py-6 xs:py-8 sm:py-14 lg:py-20 bg-white dark:bg-gray-900" style={{ paddingTop: '0.25rem', marginTop: 0 }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <SectionHeading
           title={t('services.heading')}
@@ -46,11 +69,11 @@ const ServicesOverview: React.FC = () => {
           centered
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-8 sm:mt-12">
+        <div className="infinix-services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-8 sm:mt-12">
           {servicesData.map((service, index) => (
             <motion.div
               key={service.to}
-              className="group bg-white dark:bg-gray-800 rounded-2xl p-5 sm:p-6 lg:p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              className="infinix-services-card group bg-white dark:bg-gray-800 rounded-2xl p-5 sm:p-6 lg:p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
@@ -61,12 +84,12 @@ const ServicesOverview: React.FC = () => {
               </div>
 
               {/* Title */}
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="infinix-services-title font-serif text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3">
                 {t(service.titleKey)}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed mb-6 flex-1">
+              <p className="infinix-services-desc text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed mb-6 flex-1">
                 {t(service.descKey)}
               </p>
 
@@ -83,6 +106,7 @@ const ServicesOverview: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
